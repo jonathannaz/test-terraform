@@ -1,0 +1,14 @@
+version: 3
+projects:
+  - dir: environments/dev
+    terraform_version: "v0.15.1"
+    autoplan:
+      when_modified: ["*.tf*", "../../modules/**/*.tf", "../../resources/*.tf"]
+  - dir: environments/stg
+    terraform_version: "v0.15.1"
+    autoplan:
+      when_modified: ["*.tf*", "../../modules/**/*.tf", "../../resources/*.tf"]
+  - dir: environments/prod
+    terraform_version: "v0.15.1"
+    autoplan:
+      when_modified: ["*.tf*", "../../modules/**/*.tf", "../../resources/*.tf"]
